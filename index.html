@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previsão do Tempo 🌤️</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <div class="header">
+            <h1>🌤️ Previsão do Tempo</h1>
+            <p class="subtitle">Descubra o clima em qualquer cidade</p>
+        </div>
+
+        <!-- Barra de Pesquisa -->
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="cidade" 
+                placeholder="Digite o nome da cidade..." 
+                autocomplete="off"
+            />
+            <button id="buscar">
+                <span class="btn-text">Buscar</span>
+                <span class="btn-icon">🔍</span>
+            </button>
+        </div>
+
+        <!-- Resultados -->
+        <div class="resultado" id="resultado">
+            
+            <!-- Loading -->
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Carregando...</p>
+            </div>
+
+            <!-- Conteúdo do Clima -->
+            <div class="weather-content" id="weatherContent" style="display: none;">
+                
+                <!-- Cabeçalho: Ícone + Cidade + País -->
+                <div class="weather-header">
+                    <img id="icone-clima" src="" alt="Ícone do clima" />
+                    <div class="city-info">
+                        <h2 id="nome-cidade">Cidade</h2>
+                        <p id="pais">País</p>
+                        <p id="data-hora"></p>
+                    </div>
+                </div>
+
+                <!-- Temperatura -->
+                <div class="weather-main">
+                    <div class="temperature-container">
+                        <span id="temperatura">--°C</span>
+                    </div>
+                    <p id="clima" class="weather-description">---</p>
+                </div>
+
+                <!-- Detalhes do Clima -->
+                <div class="weather-details">
+                    <!-- Umidade -->
+                    <div class="detail-card">
+                        <span class="detail-icon">💧</span>
+                        <div>
+                            <p class="detail-label">Umidade</p>
+                            <p id="umidade" class="detail-value">--%</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Vento -->
+                    <div class="detail-card">
+                        <span class="detail-icon">💨</span>
+                        <div>
+                            <p class="detail-label">Vento</p>
+                            <p id="vento" class="detail-value">-- m/s</p>
+                            <p id="direcao-vento" class="detail-sub">--</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Sensação -->
+                    <div class="detail-card">
+                        <span class="detail-icon">🌡️</span>
+                        <div>
+                            <p class="detail-label">Sensação</p>
+                            <p id="sensacao" class="detail-value">--°C</p>
+                        </div>
+                    </div>
+
+                    <!-- Visibilidade -->
+                    <div class="detail-card">
+                        <span class="detail-icon">👁️</span>
+                        <div>
+                            <p class="detail-label">Visibilidade</p>
+                            <p id="visibilidade" class="detail-value">-- km</p>
+                        </div>
+                    </div>
+
+                    <!-- Nascer do Sol -->
+                    <div class="detail-card">
+                        <span class="detail-icon">🌅</span>
+                        <div>
+                            <p class="detail-label">Nascer do Sol</p>
+                            <p id="nascer-sol" class="detail-value">--:--</p>
+                        </div>
+                    </div>
+
+                    <!-- Pôr do Sol -->
+                    <div class="detail-card">
+                        <span class="detail-icon">🌇</span>
+                        <div>
+                            <p class="detail-label">Pôr do Sol</p>
+                            <p id="por-sol" class="detail-value">--:--</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensagem de Boas-vindas -->
+            <div class="welcome-message" id="welcomeMessage">
+                <div class="welcome-icon">🏙️</div>
+                <h3>Busque uma cidade</h3>
+                <p>Digite o nome de uma cidade para ver a previsão do tempo</p>
+                <p class="dica">💡 Pressione Enter para buscar</p>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="footer">
+            <p>Desenvolvido com ❤️ • Dados do OpenWeatherMap</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
