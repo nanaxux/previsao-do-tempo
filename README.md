@@ -8,7 +8,7 @@ https://nanaxux.github.io/previsao-do-tempo/
 
 ## 📸 Preview
 
-(preview.png)
+![preview](https://raw.githubusercontent.com/nanaxux/previsao-do-tempo/main/preview.png)
 
 ## 🛠️ Tecnologias
 
@@ -26,14 +26,6 @@ https://nanaxux.github.io/previsao-do-tempo/
 - Mostrar velocidade do vento
 - Mostrar sensação térmica
 - Exibir ícone do clima
-
-## 📚 O que aprendi
-
-- Manipulação do DOM
-- Consumo de APIs com `fetch`
-- Uso de funções assíncronas (`async`/`await`)
-- Tratamento de erros
-- Organização de um projeto front-end
 
 ## 👩‍💻 Desenvolvido por
 
